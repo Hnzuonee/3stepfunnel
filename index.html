@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing 1 — Vizitka</title>
+  <meta name="description" content="Rychlý test statického funnelu mimo IG WebView: vizitka + gate s odpočtem a notifikacemi.">
+  <meta property="og:title" content="Landing 1 — Vizitka">
+  <meta property="og:description" content="Vizitka s CTA, trust prvky a about.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/hero1.jpg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="theme">
+  <!-- Top progress bar -->
+  <div id="progress" aria-hidden="true"></div>
+
+  <header class="container site-header">
+    <a href="#" class="logo" aria-label="Domů" title="Domů">
+      <!-- Inline SVG logo -->
+      <svg width="36" height="36" viewBox="0 0 100 100" role="img" aria-label="Logo">
+        <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stop-color="currentColor" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="currentColor" stop-opacity="0.65"/>
+        </linearGradient></defs>
+        <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="6"></circle>
+        <path d="M28 64 L50 22 L72 64" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span class="brand">Funnel Demo</span>
+    </a>
+    <div class="header-right">
+      <span class="badge geo"><span id="geoText">ve&nbsp;tvé&nbsp;oblasti</span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Exkluzivní přístup dostupný <span class="nowrap" id="geoInline">ve tvé oblasti</span> právě dnes</h1>
+        <p class="lead">Mimo IG WebView. Rychlé, bezpečné a bez rušivých překážek.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" id="unlockBtn" href="gate.html" rel="nofollow">Odemknout přístup</a>
+          <div class="tiny muted">⚡ bez registrace • šifrované připojení</div>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item">
+            <span class="icon">✓</span>
+            <span>Bezpečné mimo IG</span>
+          </div>
+          <div class="trust-item">
+            <span class="icon">★</span>
+            <span>Hodnocení 4.9/5</span>
+          </div>
+          <div class="trust-item">
+            <span class="icon">🛡</span>
+            <span>Ověřený publisher</span>
+          </div>
+        </div>
+
+        <div class="social-proof">
+          <div class="avatars">
+            <span class="avatar a1" aria-hidden="true"></span>
+            <span class="avatar a2" aria-hidden="true"></span>
+            <span class="avatar a3" aria-hidden="true"></span>
+            <span class="avatar a4" aria-hidden="true"></span>
+          </div>
+          <div class="sp-text"><strong>1&nbsp;284</strong> uživatelů se přidalo tento týden</div>
+        </div>
+
+        <details class="about">
+          <summary>O projektu</summary>
+          <p>Toto je čistě statická vizitka. Z hlavního CTA pokračuješ na “gate”, kde běží per‑device odpočet do 23:59, scarcity prvky a notifikace. Slouží k rychlému A/B testu mimo IG WebView.</p>
+        </details>
+      </div>
+      <div class="hero-media">
+        <img src="assets/img/hero1.jpg" alt="Hero vizuál" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <span id="toastMsg">Načítám…</span>
+  </div>
+
+  <footer class="container site-footer">
+    <nav class="footer-nav">
+      <a href="#" aria-label="Podmínky">Podmínky</a>
+      <a href="#" aria-label="Soukromí">Soukromí</a>
+      <a href="#" aria-label="Kontakt">Kontakt</a>
+    </nav>
+    <div class="copyright">© <span id="year"></span> Funnel Demo</div>
+  </footer>
+
+  <script src="assets/js/landing1.js"></script>
+</body>
+</html>

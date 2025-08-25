@@ -1,19 +1,20 @@
+<!-- gate.html (EN) -->
 <!doctype html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gate — Private Access</title>
-  <meta name="description" content="Gate s odpočtem do 23:59, scarcity a notifikacemi.">
+  <meta name="description" content="Gate with countdown to 23:59, scarcity, and live notifications.">
   <meta property="og:title" content="Gate — Private Access">
-  <meta property="og:description" content="Flip odpočet, 'spots left', notifikace a finální CTA.">
+  <meta property="og:description" content="Flip countdown, 'spots left', notifications, and final CTA.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/slide2.jpg">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="theme model-theme">
   <header class="container site-header">
-    <a href="index.html" class="logo" aria-label="Zpět">
+    <a href="index.html" class="logo" aria-label="Back">
       <svg width="32" height="32" viewBox="0 0 100 100" role="img" aria-label="Logo">
         <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="6"></circle>
         <path d="M28 64 L50 22 L72 64" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -21,14 +22,14 @@
       <span class="brand">Funnel Demo</span>
     </a>
     <div class="header-right">
-      <span class="badge geo"><span id="geoText">ve&nbsp;tvé&nbsp;oblasti</span></span>
+      <span class="badge geo"><span id="geoText">in your area</span></span>
     </div>
   </header>
 
   <main>
     <section class="container gate">
-      <h1>Soukromý přístup <span id="geoInline">ve&nbsp;tvé&nbsp;oblasti</span> — platí do 23:59</h1>
-      <p class="muted">Rezervace se uzavírají přesně ve <strong>23:59</strong>.</p>
+      <h1>Private access <span id="geoInline">in your area</span> — valid until 23:59</h1>
+      <p class="muted">Join closes exactly at <strong>23:59</strong>.</p>
 
       <div class="timer" role="timer" aria-live="polite">
         <div class="digit"><span id="hh1">0</span></div>
@@ -43,22 +44,22 @@
 
       <div class="metrics">
         <div class="metric">
-          <div class="metric-label">Zbývá míst</div>
+          <div class="metric-label">Spots left</div>
           <div class="metric-value"><span id="spotsLeft">—</span></div>
         </div>
         <div class="metric">
-          <div class="metric-label">Dnes se přidalo</div>
+          <div class="metric-label">Joined today</div>
           <div class="metric-value"><span id="joinedToday">—</span></div>
         </div>
       </div>
 
       <div class="cta-panel">
         <button id="finalCta" class="btn btn-primary btn-xl">Continue to Full Profile</button>
-        <div class="tiny muted">Demo: zobrazí se alert místo redirectu.</div>
+        <div class="tiny muted">Demo: an alert will show instead of redirect.</div>
       </div>
 
       <div class="note">
-        <strong>Soukromí:</strong> žádný tracking třetích stran. Pouze <code>localStorage</code> pro časovač a počítadla na tvém zařízení.
+        <strong>Privacy:</strong> no third-party tracking. We only use <code>localStorage</code> for the timer and counters on your device.
       </div>
     </section>
   </main>
@@ -67,9 +68,9 @@
 
   <footer class="container site-footer">
     <nav class="footer-nav">
-      <a href="#" aria-label="Podmínky">Podmínky</a>
-      <a href="#" aria-label="Soukromí">Soukromí</a>
-      <a href="#" aria-label="Kontakt">Kontakt</a>
+      <a href="#" aria-label="Terms">Terms</a>
+      <a href="#" aria-label="Privacy">Privacy</a>
+      <a href="#" aria-label="Contact">Contact</a>
     </nav>
     <div class="copyright">© <span id="year"></span> Funnel Demo</div>
   </footer>

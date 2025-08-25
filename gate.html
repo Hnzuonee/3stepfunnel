@@ -1,29 +1,23 @@
-<!-- index.html (EN) -->
+<!-- gate.html (EN) -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Model — Preview</title>
-  <meta name="description" content="SFW model preview: photo carousel, teaser, and safe exit outside IG WebView.">
-  <meta property="og:title" content="Model — Preview">
-  <meta property="og:description" content="Teaser gallery and private access.">
+  <title>Gate — Private Access</title>
+  <meta name="description" content="Gate with countdown to 23:59, scarcity, and live notifications.">
+  <meta property="og:title" content="Gate — Private Access">
+  <meta property="og:description" content="Flip countdown, 'spots left', notifications, and final CTA.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/slide1.jpg">
+  <meta property="og:image" content="assets/img/slide2.jpg">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="theme model-theme">
-  <div id="progress"></div>
-
   <header class="container site-header">
-    <a href="#" class="logo" aria-label="Home">
-      <svg width="36" height="36" viewBox="0 0 100 100" role="img" aria-label="Logo">
-        <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0%" stop-color="currentColor" stop-opacity="0.95"/>
-          <stop offset="100%" stop-color="currentColor" stop-opacity="0.65"/>
-        </linearGradient></defs>
+    <a href="index.html" class="logo" aria-label="Back">
+      <svg width="32" height="32" viewBox="0 0 100 100" role="img" aria-label="Logo">
         <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="6"></circle>
-        <path d="M28 64 L50 22 L72 64" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M28 64 L50 22 L72 64" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
       <span class="brand">Funnel Demo</span>
     </a>
@@ -33,68 +27,44 @@
   </header>
 
   <main>
-    <section class="container hero hero--split">
-      <div class="hero-text">
-        <h1><span class="accent">@Kika</span> — exclusive preview <span id="geoInline">in your area</span> today</h1>
-        <p class="lead">Safe preview and private access outside IG WebView. This SFW microsite shows a teaser — the full experience lives inside the members area.</p>
+    <section class="container gate">
+      <h1>Private access <span id="geoInline">in your area</span> — valid until 23:59</h1>
+      <p class="muted">Join closes exactly at <strong>23:59</strong>.</p>
 
-        <div class="cta-row">
-          <a class="btn btn-primary btn-xl" id="unlockBtn" href="gate.html" rel="nofollow">Unlock Access</a>
-          <div class="tiny muted">⚡ No signup • Neutral redirect</div>
-        </div>
-
-        <div class="social-proof">
-          <div class="avatars">
-            <span class="avatar a1"></span>
-            <span class="avatar a2"></span>
-            <span class="avatar a3"></span>
-            <span class="avatar a4"></span>
-          </div>
-          <div class="sp-text"><strong>1,920</strong> people opened access this week</div>
-        </div>
-
-        <details class="about">
-          <summary>About the model</summary>
-          <div class="bio">
-            <p>“I’m Kika — I love fitness, traveling, and minimalist fashion looks. I share behind-the-scenes, workout tips, and authentic daily moments. Everything here is SFW; you’ll find the full experience inside the members area.”</p>
-            <ul>
-              <li>Style: clean glam • athleisure</li>
-              <li>Content: photo sets, daily stories, Q&amp;A</li>
-              <li>Language: Czech / English</li>
-            </ul>
-          </div>
-        </details>
+      <div class="timer" role="timer" aria-live="polite">
+        <div class="digit"><span id="hh1">0</span></div>
+        <div class="digit"><span id="hh2">0</span></div>
+        <div class="sep">:</div>
+        <div class="digit"><span id="mm1">0</span></div>
+        <div class="digit"><span id="mm2">0</span></div>
+        <div class="sep">:</div>
+        <div class="digit"><span id="ss1">0</span></div>
+        <div class="digit"><span id="ss2">0</span></div>
       </div>
 
-      <div class="hero-media">
-        <!-- Carousel -->
-        <div class="carousel" aria-roledescription="carousel">
-          <div class="slides" id="slides" aria-live="polite">
-            <div class="slide is-active"><img src="assets/img/slide1.jpg" alt="Look 1 — street style" loading="eager"></div>
-            <div class="slide"><img src="assets/img/slide2.jpg" alt="Look 2 — athleisure" loading="lazy"></div>
-            <div class="slide"><img src="assets/img/slide3.jpg" alt="Look 3 — studio portrait" loading="lazy"></div>
-          </div>
-          <button class="nav prev" id="prevBtn" aria-label="Previous">‹</button>
-          <button class="nav next" id="nextBtn" aria-label="Next">›</button>
-          <div class="dots" id="dots" role="tablist" aria-label="Slider bullets"></div>
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric-label">Spots left</div>
+          <div class="metric-value"><span id="spotsLeft">—</span></div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Joined today</div>
+          <div class="metric-value"><span id="joinedToday">—</span></div>
         </div>
       </div>
-    </section>
 
-    <section class="container trustband">
-      <div class="trust">
-        <div class="trust-item"><span class="icon">🛡</span> Safe for Meta</div>
-        <div class="trust-item"><span class="icon">★</span> 4.9/5 from members</div>
-        <div class="trust-item"><span class="icon">✓</span> No third-party tracking</div>
+      <div class="cta-panel">
+        <button id="finalCta" class="btn btn-primary btn-xl">Continue to Full Profile</button>
+        <div class="tiny muted">Demo: an alert will show instead of redirect.</div>
+      </div>
+
+      <div class="note">
+        <strong>Privacy:</strong> no third-party tracking. We only use <code>localStorage</code> for the timer and counters on your device.
       </div>
     </section>
   </main>
 
-  <button id="stickyCta" class="sticky-cta btn btn-primary">See More →</button>
-
-  <div id="toast" class="toast" role="status" aria-live="polite">
-    <span id="toastMsg">Loading…</span>
-  </div>
+  <div id="notifStack" class="notif-stack" aria-live="polite"></div>
 
   <footer class="container site-footer">
     <nav class="footer-nav">
@@ -105,7 +75,6 @@
     <div class="copyright">© <span id="year"></span> Funnel Demo</div>
   </footer>
 
-  <script src="assets/js/landing1.js"></script>
-  <script src="assets/js/carousel.js"></script>
+  <script src="assets/js/gate.js"></script>
 </body>
 </html>

@@ -1,12 +1,13 @@
+<!-- index.html (EN) -->
 <!doctype html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Model — Preview</title>
-  <meta name="description" content="SFW preview modelky: carousel fotek, teaser a bezpečný odchod mimo IG WebView.">
+  <meta name="description" content="SFW model preview: photo carousel, teaser, and safe exit outside IG WebView.">
   <meta property="og:title" content="Model — Preview">
-  <meta property="og:description" content="Teaser galerie a soukromý přístup.">
+  <meta property="og:description" content="Teaser gallery and private access.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/slide1.jpg">
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -15,7 +16,7 @@
   <div id="progress"></div>
 
   <header class="container site-header">
-    <a href="#" class="logo" aria-label="Domů">
+    <a href="#" class="logo" aria-label="Home">
       <svg width="36" height="36" viewBox="0 0 100 100" role="img" aria-label="Logo">
         <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
           <stop offset="0%" stop-color="currentColor" stop-opacity="0.95"/>
@@ -27,19 +28,19 @@
       <span class="brand">Funnel Demo</span>
     </a>
     <div class="header-right">
-      <span class="badge geo"><span id="geoText">ve&nbsp;tvé&nbsp;oblasti</span></span>
+      <span class="badge geo"><span id="geoText">in your area</span></span>
     </div>
   </header>
 
   <main>
     <section class="container hero hero--split">
       <div class="hero-text">
-        <h1><span class="accent">@Kika</span> — exkluzivní členství <span id="geoInline">ve tvé oblasti</span> už dnes</h1>
-        <p class="lead">Bezpečný náhled a soukromý přístup mimo IG WebView. SFW microsite → plný obsah až za branou.</p>
+        <h1><span class="accent">@Kika</span> — exclusive membership <span id="geoInline">in your area</span> today</h1>
+        <p class="lead">Safe preview and private access outside IG WebView. SFW microsite → full content is available beyond the gate.</p>
 
         <div class="cta-row">
           <a class="btn btn-primary btn-xl" id="unlockBtn" href="gate.html" rel="nofollow">Unlock Access</a>
-          <div class="tiny muted">⚡ Bez registrace • Neutrální přesměrování</div>
+          <div class="tiny muted">⚡ No signup • Neutral redirect</div>
         </div>
 
         <div class="social-proof">
@@ -49,17 +50,17 @@
             <span class="avatar a3"></span>
             <span class="avatar a4"></span>
           </div>
-          <div class="sp-text"><strong>1&nbsp;920</strong> lidí si otevřelo přístup tento týden</div>
+          <div class="sp-text"><strong>1,920</strong> people opened access this week</div>
         </div>
 
         <details class="about">
-          <summary>O modelce</summary>
+          <summary>About the model</summary>
           <div class="bio">
-            <p>„Jsem Kika — miluju fitness, cestování a fotím minimalistické looky. Sdílím behind-the-scenes, tipy na trénink a autentické momenty ze svého dne. Vše SFW zde, plný obsah najdeš až uvnitř klubové zóny.“</p>
+            <p>“I’m Kika — I love fitness, traveling, and minimalist fashion looks. I share behind-the-scenes, workout tips, and authentic daily moments. Everything here is SFW; you’ll find the full experience inside the members area.”</p>
             <ul>
-              <li>Styl: clean glam • athleisure</li>
-              <li>Obsah: foto sety, daily stories, Q&amp;A</li>
-              <li>Jazyk: čeština / angličtina</li>
+              <li>Style: clean glam • athleisure</li>
+              <li>Content: photo sets, daily stories, Q&amp;A</li>
+              <li>Language: Czech / English</li>
             </ul>
           </div>
         </details>
@@ -73,8 +74,8 @@
             <div class="slide"><img src="assets/img/slide2.jpg" alt="Look 2 — athleisure" loading="lazy"></div>
             <div class="slide"><img src="assets/img/slide3.jpg" alt="Look 3 — studio portrait" loading="lazy"></div>
           </div>
-          <button class="nav prev" id="prevBtn" aria-label="Předchozí">‹</button>
-          <button class="nav next" id="nextBtn" aria-label="Další">›</button>
+          <button class="nav prev" id="prevBtn" aria-label="Previous">‹</button>
+          <button class="nav next" id="nextBtn" aria-label="Next">›</button>
           <div class="dots" id="dots" role="tablist" aria-label="Slider bullets"></div>
         </div>
       </div>
@@ -83,8 +84,8 @@
     <section class="container trustband">
       <div class="trust">
         <div class="trust-item"><span class="icon">🛡</span> Safe for Meta</div>
-        <div class="trust-item"><span class="icon">★</span> 4.9/5 od členů</div>
-        <div class="trust-item"><span class="icon">✓</span> Žádný tracking třetích stran</div>
+        <div class="trust-item"><span class="icon">★</span> 4.9/5 from members</div>
+        <div class="trust-item"><span class="icon">✓</span> No third-party tracking</div>
       </div>
     </section>
   </main>
@@ -92,14 +93,14 @@
   <button id="stickyCta" class="sticky-cta btn btn-primary">See More →</button>
 
   <div id="toast" class="toast" role="status" aria-live="polite">
-    <span id="toastMsg">Načítám…</span>
+    <span id="toastMsg">Loading…</span>
   </div>
 
   <footer class="container site-footer">
     <nav class="footer-nav">
-      <a href="#" aria-label="Podmínky">Podmínky</a>
-      <a href="#" aria-label="Soukromí">Soukromí</a>
-      <a href="#" aria-label="Kontakt">Kontakt</a>
+      <a href="#" aria-label="Terms">Terms</a>
+      <a href="#" aria-label="Privacy">Privacy</a>
+      <a href="#" aria-label="Contact">Contact</a>
     </nav>
     <div class="copyright">© <span id="year"></span> Funnel Demo</div>
   </footer>
